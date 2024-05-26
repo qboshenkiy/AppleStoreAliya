@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Iphone</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="nav-logo">
+          <img
+            src="{% static 'image/free-icon-apple-logo-747.png' %}"
+            alt=""
+            class="logo-img"
+            width="30"
+          />
+          <a href="../../" class="logo-text nav-a">Store</a>
+        </div>
+        <ul class="nav-ul">
+          <li class="nav-li"><a href="#Mac" class="nav-a">Mac</a></li>
+          <li class="nav-li"><a href="#iPad" class="nav-a">iPad</a></li>
+          <li class="nav-li"><a href="#iPhone" class="nav-a">iPhone</a></li>
+          <li class="nav-li"><a href="#Watch" class="nav-a">Watch</a></li>
+          <li class="nav-li"><a href="#Vision" class="nav-a">Vision</a></li>
+          <li class="nav-li"><a href="#AirPods" class="nav-a">AirPods</a></li>
+        </ul>
+      </nav>
+        <div class="box-header">
+        <img src="{% static 'image/загружено-fotor-bg-remover-2024052616924.png' %}" alt="" class="box-img">
+        <div class="header-div-text">
+          <h1 class="header-title">IPHONE 15 PRO MAX &<br> IPHONE 15 PLUS</h1>
+          <span class="line"></span>
+          <p class="header-text">Это то что делает людей счастливыми</p>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            {% block content %}{% endblock%}
+        </div>
+    </main>
+    <footer>
+        <a class="nav-a">Работу выполнила Алиева Алия</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'Layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="detail-box">
+          <img
+            class="detail-img"
+            src="{{ product.image.url }}"
+            alt="{{ product.name }}"
+            width="500"
+            height="591"
+          />
+          <div class="box-text-detail">
+            <div class="detail-container">
+              <h1 class="detail-name">
+                {{ product.name }}
+              </h1>
+              <p class="detail-desc">
+                {{ product.description }}
+              </p>
+            </div>
+            <div class="price-box">
+              <div class="box-buy btn-detail">
+                <p class="detail-price">{{ product.price }}</p>
+                <div class="buy">
+                  <a
+                    href="{% url 'shop:product_detail' product.id product.slug %}"
+                    class="btn-a"
+                    >Buy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}

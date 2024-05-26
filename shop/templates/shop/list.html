@@ -1,0 +1,25 @@
+{% extends 'Layout.html' %}
+{% load static %}
+{% block content %}
+
+<div class="category-container">
+  {% for category, products_in_category in categories_with_products %}
+    <h2 class="category-name" id="{{ category.name }}">{{ category.name }}</h2>
+    <div class="product-list">
+      {% for product in products_in_category %}
+        <div class="product-card">
+          <h3 class="product-name">{{ product.name }}</h3>
+          <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-img" />
+          <div class="box-buy">
+            <p class="product-price">{{ product.price }}</p>
+            <div class="buy">
+              <a href="{% url 'shop:product_detail' product.id product.slug %}" class="btn-a">Buy</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
